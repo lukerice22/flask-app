@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Life Stats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Life Stats</h1>
+        <h2>Please enter your birthday</h2>
+        <form id="birthdate-form">
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" placeholder="Enter year" required>
+            <label for="month">Month:</label>
+            <input type="text" id="month" name="month" placeholder="Enter month" required>
+            <label for="day">Day:</label>
+            <input type="text" id="day" name="day" placeholder="Enter day" required>
+            <button type="submit">Calculate Stats</button>
+        </form>
+        <div id="loading" class="loading-spinner" style="display: none;">Loading...</div>
+        <div id="stats-container">
+            <!-- Stats will appear here -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

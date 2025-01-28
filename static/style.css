@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.stat {
+    background: #ffffff;
+    margin: 200px auto; /* Increased vertical margin for more space */
+    padding: 150px 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    font-size: 2.5rem;
+    background-color: #f9f9f9;
+}
+
+.stat.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat strong {
+    color: #000000;
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+#birthdate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#birthdate-form input,
+#birthdate-form button {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#birthdate-form button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#birthdate-form button:hover {
+    background-color: #45a049;
+}
+
+.loading-spinner {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0;
+}
