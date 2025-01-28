@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, jsonify
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
@@ -116,4 +117,4 @@ def calculate_stats():
     return jsonify(descriptive_stats)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
