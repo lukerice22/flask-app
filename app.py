@@ -91,32 +91,33 @@ def calculate_stats():
         def format_number(number):
             return "{:,}".format(number)
         
+        # Inside your Flask route (calculate_stats):
         descriptive_stats = {
-            'Total days lived': format_number(days_alive),
-            'Total hours lived': format_number(hours_alive),
-            'Total minutes lived': format_number(minutes_alive),
-            'Total seconds lived': format_number(seconds_alive),
-            'Total Breaths Taken': format_number(breaths_taken),
-            'Heartbeats': format_number(heartbeats),
-            'The amount of times you have smiled': format_number(smiles),
-            'Meals Eaten': format_number(meals_eaten),
-            'Steps Taken': format_number(steps_taken),
-            'Days Slept': format_number(days_slept),
-            'Distance you travelled with the earth!': format_number(earth_distance),
-            'Full Moons Since your Birth': format_number(full_moons),
-            'Global Rainfall': format_number(global_rainfall_feet),
-            'Earthquakes since birth': format_number(earthquakes),
-            'New species discovered': format_number(species_discovered),
-            'New Words Added to the dictionary': format_number(new_words_added),
-            'Olympic Games Since Birth': format_number(olympic_games),
-            'Amount of people with the same birthday!': format_number(same_day_births),
-            'Deforestation Reversed': f"{deforestation_reversed_percentage:.2f}%",
-            'Ocean Rise': format_number(ocean_rise),
-            'Hours you have Worked ': format_number(hours_worked),
-            'Poverty Lifted': format_number(poverty_lifted),
-            'Poverty Decrease': f"{poverty_decrease_percentage}%",
-            'People cured from disease': format_number(people_cured),
-        }
+    'Total days lived': f"{format_number(days_alive)} days",
+    'Total hours lived': f"{format_number(hours_alive)} hours",
+    'Total minutes lived': f"{format_number(minutes_alive)} minutes",
+    'Total seconds lived': f"{format_number(seconds_alive)} seconds",
+    'Total Breaths Taken': f"{format_number(breaths_taken)} breaths",
+    'Heartbeats': f"{format_number(heartbeats)} beats",
+    'The amount of times you have smiled': f"{format_number(smiles)} times",
+    'Meals Eaten': f"{format_number(meals_eaten)} meals",
+    'Steps Taken': f"{format_number(steps_taken)} steps",
+    'Days Slept': f"{format_number(days_slept)} days",
+    'Distance you travelled with the earth!': f"{format_number(earth_distance)} miles",
+    'Full Moons Since your Birth': f"{format_number(full_moons)} full moons",
+    'Global Rainfall': f"{format_number(global_rainfall_feet)} feet",
+    'Earthquakes since birth': f"{format_number(earthquakes)} earthquakes",
+    'New species discovered': f"{format_number(species_discovered)} species",
+    'New Words Added to the dictionary': f"{format_number(new_words_added)} words",
+    'Olympic Games Since Birth': f"{format_number(olympic_games)} games",
+    'Amount of people with the same birthday!': f"{format_number(same_day_births)} people",
+    'Deforestation Reversed': f"{deforestation_reversed_percentage:.2f}%",
+    'Ocean Rise': f"{ocean_rise:.4f} inches",
+    'Hours you have Worked ': f"{format_number(hours_worked)} hours",
+    'Poverty Lifted': f"{format_number(poverty_lifted)} people",
+    'Poverty Decrease': f"{poverty_decrease_percentage}%",
+    'People cured from disease': f"{format_number(people_cured)} people",
+}
 
         return jsonify(descriptive_stats)
     except Exception as e:
